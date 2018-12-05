@@ -1,5 +1,8 @@
 package br.old.dbserver.test.automacao;
 
+import java.nio.charset.Charset;
+import java.util.Random;
+
 import org.openqa.selenium.WebDriver;
 
 public class Tasks {

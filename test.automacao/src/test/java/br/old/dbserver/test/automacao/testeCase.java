@@ -1,19 +1,13 @@
 package br.old.dbserver.test.automacao;
 
-import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertTrue;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+import Helper.Helpers;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class testeCase {
@@ -23,6 +17,7 @@ public class testeCase {
 	Tasks task = new Tasks(driver);
 	VerificationPoint verify = new VerificationPoint(driver);
 	AppObjects appObject = new AppObjects(driver);
+	Helpers helper = new Helpers();
 	
     @BeforeClass
     public static void setUpTest(){
@@ -44,7 +39,7 @@ public class testeCase {
     	appObject.waitFiveSeconds();
     	task.proceedToCheckout();
     	task.proceedToCheckout();
-    	task.inputEntryEmail("agoravai1@mail.com");
+    	task.inputEntryEmail(helper.generateRandomEmail());
     	task.submitEntryEmail();
     	task.generateCreation("Rhuan",  
     			"Dornelles", 
