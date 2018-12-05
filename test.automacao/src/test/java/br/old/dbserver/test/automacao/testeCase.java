@@ -60,6 +60,4 @@ public class testeCase {
     	task.clickCheckoutBuyings();
     	verify.verifyCheckoutBuying();
     }
-   
-    
 }

@@ -2,15 +2,10 @@ package br.old.dbserver.test.automacao;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class AppObjects {
 	
@@ -119,19 +114,4 @@ public class AppObjects {
 	public String getSourcePageElement() {
 		return driver.getPageSource();
 	}
-	
-	
-	
-    
-    //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    //driver.findElement(By.linkText("Proceed to checkout")).click();
-    //makeInput("submitAccount").click();
-//    driver.findElement(By.name("processAddress")).click();
-//    makeInput("cgv").click();
-    //driver.findElement(By.name("processCarrier")).click();
-    //driver.findElement(By.className("payment_module")).click();
-    //driver.findElement(By.xpath("//*[@id=\"cart_navigation\"]/button")).click();
-    
-    
-    
 }
